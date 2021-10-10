@@ -1,5 +1,5 @@
-async function windowActions {
-    const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
+/* eslint-disable no-shadow */
+const endpoint = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
 const foodData = [];
 fetch(endpoint).then((blob) => blob.json()).then((data) => foodData.push(...data));
 
@@ -25,7 +25,4 @@ function displayMatches() {
 
 searchInput.addEventListener('change', displayMatches);
 
-}
-
 window.onload = windowActions;
-
